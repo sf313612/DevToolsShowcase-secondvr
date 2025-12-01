@@ -1,0 +1,129 @@
+.row{
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+
+    .header_container {
+      padding: 16px 20px;
+  
+      .nav_container {
+        gap: 20px;
+      }
+  
+      .site_logo {
+        height: 50px;
+      }
+  
+      nav ul {
+        gap: 12px;
+  
+        li a {
+          font-size: 16px;
+        }
+      }
+    }
+  
+    .menu_and_search {
+      gap: 8px;
+    }
+  
+    .search_box input[type="text"] {
+      width: 120px;
+      padding: 6px 10px;
+    }
+  
+    .hero_picture img {
+      padding-top: 100px;
+    }
+  
+    .overlay {
+      left: 10%;
+      top: 20%;
+      transform: translate(0, 0);
+      max-width: 300px;
+      gap: 12px;
+    }
+  
+    .top_tools {
+      padding: 20px;
+  
+      .tool_card {
+        flex-direction: column;
+        text-align: center;
+  
+        img {
+          width: 100%;
+          height: 180px;
+        }
+  
+        .top_tool_info {
+          align-items: center;
+  
+          h3 {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  
+    #about {
+      padding: 40px 20px;
+    }
+  
+    .about_header {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .about_cards {
+      flex-direction: column;
+    }
+  
+    .about_card {
+      padding: 20px;
+    }
+  
+    .tools_list {
+      padding-top: 120px;
+  
+      .tool_cards_container {
+        gap: 20px;
+      }
+  
+      .tool_list_card {
+        width: 100%;
+      }
+    }
+  
+    .tool_details {
+      padding-top: 120px;
+  
+      .tool_header {
+        flex-direction: column;
+        text-align: center;
+  
+        .tool_button {
+          margin: 0 auto;
+        }
+      }
+  
+      .tool_gallery img {
+        width: 100%;
+      }
+    }
+  
+    .footer_container {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  
+    .footer_left,
+    .footer_right {
+      text-align: center;
+    }
+  
+  }
+  

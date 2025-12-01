@@ -1,0 +1,48 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+@mixin grid($cols, $gap) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  gap: $gap;
+}
+
+@mixin container {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+  }
+
+@mixin title {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@mixin exoFont($size, $weight, $color, $style: normal) {
+  font-family: "Exo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  font-style: $style;
+}
+
+@mixin sandFont($size, $weight, $color, $style: normal) {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  font-style: $style;
+}
+
+@mixin sandFontB($size, $weight, $color, $style: normal) {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  font-style: $style;
+}

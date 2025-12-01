@@ -1,0 +1,123 @@
+.row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .header_container {
+    padding: 16px 20px;
+  }
+  .header_container .nav_container {
+    gap: 20px;
+  }
+  .header_container .site_logo {
+    height: 50px;
+  }
+  .header_container nav ul {
+    gap: 12px;
+  }
+  .header_container nav ul li a {
+    font-size: 16px;
+  }
+  .menu_and_search {
+    gap: 8px;
+  }
+  .search_box input[type="text"] {
+    width: 120px;
+    padding: 6px 10px;
+  }
+  .hero_picture img {
+    padding-top: 100px;
+  }
+  .overlay {
+    left: 10%;
+    top: 20%;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    max-width: 300px;
+    gap: 12px;
+  }
+  .top_tools {
+    padding: 20px;
+  }
+  .top_tools .tool_card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .top_tools .tool_card img {
+    width: 100%;
+    height: 180px;
+  }
+  .top_tools .tool_card .top_tool_info {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .top_tools .tool_card .top_tool_info h3 {
+    font-size: 22px;
+  }
+  #about {
+    padding: 40px 20px;
+  }
+  .about_header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  .about_cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about_card {
+    padding: 20px;
+  }
+  .tools_list {
+    padding-top: 120px;
+  }
+  .tools_list .tool_cards_container {
+    gap: 20px;
+  }
+  .tools_list .tool_list_card {
+    width: 100%;
+  }
+  .tool_details {
+    padding-top: 120px;
+  }
+  .tool_details .tool_header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .tool_details .tool_header .tool_button {
+    margin: 0 auto;
+  }
+  .tool_details .tool_gallery img {
+    width: 100%;
+  }
+  .footer_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .footer_left,
+  .footer_right {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=mobile.css.map */

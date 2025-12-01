@@ -1,0 +1,11 @@
+@use "abstracts/functions" as *;
+
+.mt-1 { margin-top: rem(8); }
+.mt-2 { margin-top: rem(16); }
+.mt-3 { margin-top: rem(24); }
+
+.hide-mobile {
+  @media (max-width: $break-m) {
+    display: none;
+  }
+}

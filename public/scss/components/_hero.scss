@@ -1,0 +1,37 @@
+.hero {
+    position: relative;
+  
+    &__overlay {
+      position: absolute;
+      bottom: 20%;
+      left: 10%;
+      max-width: 500px;
+    }
+  
+    &__title {
+      @include title;
+      font-size: rem(48);
+    }
+  
+    &__btn {
+      padding: rem(12) rem(24);
+      background: $color-primary;
+      color: white;
+      border-radius: rem(10);
+      transition: 0.3s;
+  
+      &:hover {
+        background: color-mix(in srgb, $color-primary, white 20%);
+      }
+    }
+  }
+  
+  @media (max-width: $break-l) {
+    .hero__title { font-size: rem(38); }
+  }
+  
+  @media (max-width: $break-m) {
+    .hero__title { font-size: rem(28); }
+    .hero__overlay { bottom: 10%; }
+  }
+  

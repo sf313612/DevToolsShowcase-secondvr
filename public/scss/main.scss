@@ -1,0 +1,155 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+//@use "abstracts/functions";
+
+//@use "base/reset";
+//@use "base/typography";
+//@use "base/utilities";
+
+//@use "layout/header";
+//@use "layout/footer";
+//@use "layout/navigation";
+
+//@use "components/buttons";
+//@use "components/cards";
+//@use "components/hero";
+//@use "components/top-tools";
+//@use "components/about";
+
+//@use "pages/home";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: $background-color;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+  h4{
+    @include sandFontB(20px, 700, $white);
+    span{
+      color: $primary-color;
+    }
+  }
+}
+
+.learn_more_button{
+  border-radius: 55px;
+  padding: 22px 20px;
+  border: 0;
+  @include sandFont(18px, bold, $secondary-color);
+  background: $white;
+  transition: background 0.3s;
+
+  &:hover {
+    background: $primary-color;
+  }
+}
+
+.see_list_button{
+  text-align: center;  
+  border-radius: 20px;
+  padding: 22px 20px;
+  border: 0;
+  @include sandFont(18px, bold, $white);
+  background: $secondary-color;
+  transition: background 0.3s;
+  
+  &:hover {
+    background: $attantion-color;
+  }
+}
+
+.see_page_button {
+  text-align: center;
+
+  .see_page {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: $secondary-color;
+    color: $white;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background 0.3s;
+    @include sandFont(18px, bold, $white);
+
+    &:hover {
+      background-color: $attantion-color;
+    }
+  }
+}
+
+.go_back_button {
+  text-align: center;
+  margin-top: 20px;
+  padding: 22px 20px;
+  background: $secondary-color;
+  @include sandFont(18px, bold, $white);
+  border-radius: 20px;
+  border: 0;
+  transition: background 0.3s;
+
+  &:hover {
+    background: $attantion-color;
+  }
+  
+}
+
+@media print {
+    nav, footer, button {
+      display: none !important;
+    }
+
+    body {
+      font-size: 12pt;
+      color: black;
+      background: white;
+    }
+  }
+
+  h1 {
+    @include sandFontB(clamp(28px, 5vw, 48px), 700, $secondary-color);
+    font-size: 50px;
+}
+
+h2 {
+    @include sandFontB(clamp(28px, 5vw, 48px), 700, $secondary-color);
+}
+
+h3 {
+  @include sandFontB(clamp(28px, 5vw, 48px), 700, $secondary-color);
+}
+
+p {
+    @include sandFontB(clamp(16px, 2.5vw, 20px), 400, $secondary-color);
+    line-height: 1.5;
+}
+
+@import "desktop.scss";
+
+  @media screen and (max-width: 1024px) {
+    @import "tablet.scss";
+  }
+
+  @media screen and (max-width: 600px) { 
+    @import "mobile.scss";
+  }

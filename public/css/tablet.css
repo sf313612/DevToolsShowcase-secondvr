@@ -1,0 +1,38 @@
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .header_container {
+    padding: 24px 30px;
+  }
+  .header_container .site_logo {
+    height: 65px;
+  }
+  .header_container nav ul li a {
+    font-size: 18px;
+  }
+  .hero_picture img {
+    padding-top: 115px;
+  }
+  .overlay {
+    max-width: 500px;
+  }
+  .top_tools .tool_card img {
+    width: 160px;
+    height: 160px;
+  }
+  #about {
+    padding: 50px 30px;
+  }
+  .about_cards {
+    gap: 20px;
+  }
+  .tools_list {
+    max-width: 900px;
+  }
+  .tool_details .tool_header .tool_logo {
+    width: 90px;
+    height: 90px;
+  }
+  .tool_details .tool_gallery img {
+    width: calc(33.33% - 20px);
+  }
+}
+/*# sourceMappingURL=tablet.css.map */
