@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Exo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
@@ -246,6 +247,21 @@ p {
   font-style: normal;
 }
 
+.burger_btn {
+  display: none;
+  /* ховаємо на десктопі */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger_btn::before {
+  content: "\2630";
+  /* ☰ */
+  font-size: 28px;
+  color: white;
+}
+
 .menu_and_search {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -305,24 +321,43 @@ section {
 }
 
 section.hero {
-  padding: 0;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 0;
+}
+
+.hero_picture {
+  position: absolute;
+  top: 17%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
 }
 
 .hero_picture img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  padding-top: 125px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .overlay {
   position: absolute;
-  top: 15%;
-  left: 15%;
-  -webkit-transform: translate(-20%, -20%);
-          transform: translate(-20%, -20%);
+  top: 50%;
+  /* можеш підкоригувати відступ зверху */
+  left: 10%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   max-width: 600px;
-  text-align: left;
+  z-index: 10;
+  /* текст завжди поверх картинки */
+  color: #FFFFFF;
+  /* щоб текст був видимим на картинці */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -907,12 +942,19 @@ section.hero {
   .header_container nav ul li a {
     font-size: 18px;
   }
-  .hero_picture img {
-    padding-top: 115px;
-  }
   .overlay {
-    max-width: 500px;
+    left: 5%;
+    /* менший відступ збоку */
+    max-width: 80%;
+    /* трохи вже */
+    gap: 15px;
+    padding: 15px;
+    font-size: 1rem;
+    /* текст трохи менший */
   }
+}
+
+@media screen and (max-width: 1024px) {
   .top_tools .tool_card img {
     width: 160px;
     height: 160px;
@@ -944,17 +986,66 @@ section.hero {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  /* ===== Мобільні стилі ===== */
 }
 
 @media screen and (max-width: 600px) and (max-width: 768px) {
+  /* Бургер кнопка
+  .burger_btn {
+    display: block;
+  }
+  *\
+
+  /* ===== Hero ===== */
+  .hero_picture img {
+    top: 0;
+  }
+  .overlay {
+    top: 40%;
+    left: 5%;
+    max-width: 90%;
+    gap: 10px;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  /* ===== Header ===== */
   .header_container {
     padding: 16px 20px;
   }
-  .header_container .nav_container {
-    gap: 20px;
-  }
   .header_container .site_logo {
     height: 50px;
+  }
+  .header_container .nav_container {
+    display: none;
+    /* ховаємо за замовчуванням */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 100%;
+    /* під хедером */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+  }
+  .header_container .nav_container.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* показуємо при кліку */
+  }
+  .header_container .nav_container ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+  .header_container .nav_container ul li a {
+    font-size: 16px;
+    color: white;
   }
   .header_container nav ul {
     gap: 12px;
@@ -969,39 +1060,37 @@ section.hero {
     width: 120px;
     padding: 6px 10px;
   }
-  .hero_picture img {
-    padding-top: 100px;
-  }
-  .overlay {
-    left: 10%;
-    top: 20%;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    max-width: 300px;
-    gap: 12px;
-  }
+  /* ===== Top Tools ===== */
   .top_tools {
     padding: 20px;
+  }
+  .top_tools .top_tools_title {
+    margin-left: auto;
+    margin-right: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .top_tools .tool_card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
   .top_tools .tool_card img {
     width: 100%;
     height: 180px;
   }
   .top_tools .tool_card .top_tool_info {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .top_tools .tool_card .top_tool_info h3 {
     font-size: 22px;
   }
+  /* ===== About ===== */
   #about {
     padding: 40px 20px;
   }
@@ -1021,8 +1110,12 @@ section.hero {
   .about_card {
     padding: 20px;
   }
+  /* ===== Tools List ===== */
   .tools_list {
     padding-top: 120px;
+  }
+  .tools_list h2 {
+    text-align: center;
   }
   .tools_list .tool_cards_container {
     gap: 20px;
@@ -1030,6 +1123,7 @@ section.hero {
   .tools_list .tool_list_card {
     width: 100%;
   }
+  /* ===== Tool Details ===== */
   .tool_details {
     padding-top: 120px;
   }
@@ -1046,17 +1140,18 @@ section.hero {
   .tool_details .tool_gallery img {
     width: 100%;
   }
+  /* ===== Footer ===== */
   .footer_container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 20px;
-    text-align: center;
+    text-align: left;
   }
   .footer_left,
   .footer_right {
-    text-align: center;
+    text-align: left;
   }
 }
 /*# sourceMappingURL=main.css.map */

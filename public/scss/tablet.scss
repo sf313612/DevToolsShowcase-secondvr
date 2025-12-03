@@ -11,13 +11,14 @@
         font-size: 18px;
       }
     }
-  
-    .hero_picture img {
-      padding-top: 115px;
-    }
-  
-    .overlay {
-      max-width: 500px;
+
+      .overlay {
+        left: 5%;       
+        max-width: 80%; 
+        gap: 15px;
+        padding: 15px;
+        font-size: 1rem; 
+      }
     }
   
     .top_tools .tool_card img {
@@ -45,5 +46,4 @@
     .tool_details .tool_gallery img {
       width: calc(33.33% - 20px);
     }
-  }
   
