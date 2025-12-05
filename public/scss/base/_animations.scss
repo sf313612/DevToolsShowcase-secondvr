@@ -1,0 +1,15 @@
+// Стартова позиція елементів – знизу
+.slide-up-from-bottom {
+    transform: translateY(60px); // старт знизу
+    opacity: 0;
+    animation: slideUpFromBottom 1s forwards;
+  }
+  
+  // Ключові кадри анімації
+  @keyframes slideUpFromBottom {
+    to {
+      transform: translateY(0); // кінцева позиція
+      opacity: 1;
+    }
+  }
+  

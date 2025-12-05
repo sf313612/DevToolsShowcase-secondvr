@@ -1,22 +1,15 @@
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
-//@use "abstracts/functions";
+@import "./abstracts/functions";
+@import "./base/utilities";
+@import "./base/animations";
 
-//@use "base/reset";
-//@use "base/typography";
-//@use "base/utilities";
-
-//@use "layout/header";
-//@use "layout/footer";
-//@use "layout/navigation";
-
-//@use "components/buttons";
-//@use "components/cards";
-//@use "components/hero";
-//@use "components/top-tools";
-//@use "components/about";
-
-//@use "pages/home";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./components/tool-details";
+@import "./components/hero";
+@import "./components/about";
+@import "./components/top-tools";
 
 * {
   margin: 0;
@@ -29,6 +22,7 @@ body {
   background-color: $background-color;
 }
 
+
 ul, ol {
   list-style: none;
 }
@@ -37,19 +31,6 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-}
-
-.logo{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  
-  h4{
-    @include sandFontB(20px, 700, $white);
-    span{
-      color: $primary-color;
-    }
-  }
 }
 
 .learn_more_button{
@@ -71,7 +52,7 @@ a {
   padding: 22px 20px;
   border: 0;
   @include sandFont(18px, bold, $white);
-  background: $secondary-color;
+  background-color: mix-color($secondary-color, $white, 100%);
   transition: background 0.3s;
   
   &:hover {
@@ -85,7 +66,7 @@ a {
   .see_page {
     display: inline-block;
     padding: 12px 30px;
-    background-color: $secondary-color;
+    background-color: mix-color($secondary-color, $white, 100%);
     color: $white;
     border-radius: 30px;
     font-weight: 600;
@@ -102,7 +83,7 @@ a {
   text-align: center;
   margin-top: 20px;
   padding: 22px 20px;
-  background: $secondary-color;
+  background-color: mix-color($secondary-color, $white, 100%);
   @include sandFont(18px, bold, $white);
   border-radius: 20px;
   border: 0;
@@ -127,29 +108,29 @@ a {
   }
 
   h1 {
-    @include sandFontB(clamp(28px, 5vw, 48px), 700, $secondary-color);
+    @include sandFont(clamp(28px, 5vw, 48px), 700, $secondary-color);
     font-size: 50px;
 }
 
 h2 {
-    @include sandFontB(clamp(28px, 5vw, 48px), 700, $secondary-color);
+    @include sandFont(clamp(28px, 5vw, 48px), 700, $secondary-color);
 }
 
 h3 {
-  @include sandFontB(clamp(28px, 5vw, 48px), 700, $secondary-color);
+  @include sandFont(clamp(28px, 5vw, 48px), 700, $secondary-color);
 }
 
 p {
-    @include sandFontB(clamp(16px, 2.5vw, 20px), 400, $secondary-color);
+    @include sandFont(clamp(16px, 2.5vw, 20px), 400, $secondary-color);
     line-height: 1.5;
 }
 
-@import "desktop.scss";
+//@import "desktop.scss";
 
-  @media screen and (max-width: 1024px) {
-    @import "tablet.scss";
-  }
+@media (max-width: 1024px) {
+  @import "tablet.scss";
+}
 
-  @media screen and (max-width: 600px) { 
-    @import "mobile.scss";
-  }
+@media (max-width: 600px) {
+  @import "mobile.scss";
+}

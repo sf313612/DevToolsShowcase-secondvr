@@ -139,79 +139,89 @@ section.hero {
 }
 
 .top_tools {
-    padding: 16px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  padding-bottom: 60px; 
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 
-    .top_tools_title {
-        align-self: flex-end; 
-        @include sandFontB(clamp(28px, 5vw, 48px), 700, $white);
-        margin-bottom: 20px;
-    }
+  .top_tools_title {
+      align-self: flex-end; 
+      @include sandFont(clamp(28px, 5vw, 48px), 700, $white);
+      margin-bottom: 20px;
+  }
 
-    .tool_card {
-        display: flex;
-        flex-direction: row;
-        gap: 16px;
-        padding: 0;
-        background-color: #fff; 
-        border-radius: 12px; 
-        overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-decoration: none; 
-        color: inherit;
+  .tool_card {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      padding: 0;
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      color: inherit;
 
-        img {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      }
 
-        .top_tool_info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 6px;
-        
-            .topic {
-                font-size: 14px;
-                font-weight: 700;
-                color: $attantion-color;
-            }
+      img {
+          width: 180px;
+          height: 180px;
+          object-fit: cover;
+          border-radius: 8px;
+          flex-shrink: 0;
+      }
 
-            h3 {
-                margin: 0;
-                font-weight: 700;
-                font-size: 32px;
+      .top_tool_info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 10px;
+          padding: 20px; // додала як у другому прикладі
+
+          .topic {
+              @include sandFont(14px, 700, $attantion-color);
+          }
+
+          h3 {
+              margin: 0;
+              font-weight: 700;
+              font-size: 32px;
+              @include sandFont(32px, 700, $secondary-color);
+          }
+
+          p {
+              margin: 0;
+              font-size: 14px;
+              color: $secondary-color;
+          }
+
+          .info {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              font-size: 12px;
+              font-weight: 700;
+              color: $secondary-color;
+
+              @include sandFont(12px, 700, $secondary-color);
+
+              &::before {
+                  content: '';
+                  width: 32px;
+                  height: 32px;
+                  border-radius: 50%;
+                  background-color: $attantion-color;
+                  display: inline-block;
               }
-        
-            p {
-                margin: 0;
-                font-size: 14px;
-                color: $secondary-color;
-            }
-        
-            .info {
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                font-size: 12px;
-                font-weight: 700;
-                color: $secondary-color;
-                    &::before {
-                        content: '';
-                        width: 32px;  
-                        height: 32px;
-                        border-radius: 50%;
-                        background-color: $attantion-color;
-                        display: inline-block;
-                    }
-            }
-        }
-    }
-
+          }
+      }
+  }
 }
 
 #about {
@@ -278,7 +288,7 @@ section.hero {
             display: inline-block;
             z-index: 2;
 
-            @include sandFontB(22px, 700, $white);
+            @include sandFont(22px, 700, $white);
 
             left: 20px;
             
@@ -383,7 +393,7 @@ section.hero {
     margin-bottom: 40px;
     color: $white;
     text-align: left;
-    @include sandFontB(clamp(28px, 5vw, 48px), 700, $white);
+    @include sandFont(clamp(28px, 5vw, 48px), 700, $white);
   }
 
   .tool_cards_container {
@@ -426,12 +436,12 @@ section.hero {
 
       .topic {
         //margin-bottom: 6px;
-        @include sandFontB(12px, 700, $attantion-color);
+        @include sandFont(12px, 700, $attantion-color);
       }
 
       h3 {
         //margin-bottom: 12px;
-        @include sandFontB(26px, 700, $secondary-color);
+        @include sandFont(26px, 700, $secondary-color);
       }
 
       p {
@@ -441,7 +451,7 @@ section.hero {
       }
 
       .info {
-        @include sandFontB(12px, 700, $secondary-color);
+        @include sandFont(12px, 700, $secondary-color);
       }
     }
   }
@@ -484,11 +494,11 @@ section.hero {
   
         h1 {
           margin: 0;
-          @include sandFontB(clamp(28px, 4vw, 36px), 700, $white);
+          @include sandFont(clamp(28px, 4vw, 36px), 700, $white);
         }
   
         p {
-          @include sandFontB(14px, 400, $white);
+          @include sandFont(14px, 400, $white);
           margin: 0;
         }
       }

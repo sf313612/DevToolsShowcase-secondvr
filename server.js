@@ -18,6 +18,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => res.render("index"));
 app.get("/index", (req, res) => res.render("index"));
 app.get("/tools", (req, res) => res.render("tools"));
+app.get("/about", (req, res) => res.render("about"));
 app.get("/details", (req, res) => res.render("details"));
 
 // Запуск сервера

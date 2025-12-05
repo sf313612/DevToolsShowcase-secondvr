@@ -1,4 +1,16 @@
-@function rem($px) {
-    @return calc($px / 16) * 1rem;
-  }
-  
+// Функція для конвертації px у rem
+@function rem($px, $base: 16) {
+  @return #{$px / $base}rem;
+}
+
+// Функція змішування кольорів
+@function mix-color($color1, $color2, $weight: 50%) {
+  @return color-mix(in srgb, $color1 $weight, $color2 calc(100% - #{$weight}));
+}
+
+// Міксін для адаптивного шрифту з clamp()
+@mixin responsive-font($min, $vw, $max, $weight: 400, $color: black) {
+  font-size: clamp(rem($min), #{$vw}vw, rem($max));
+  font-weight: $weight;
+  color: $color;
+}

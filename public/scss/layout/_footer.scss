@@ -1,0 +1,53 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: $secondary-color;
+    color: $white;
+    padding: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+  
+    &__left,
+    &__right {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: 1.5;
+    }
+  
+    &__section {
+      display: flex;
+      gap: 4px;
+  
+      strong {
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+  
+      a {
+        color: $white;
+        text-decoration: none;
+        font-weight: 400;
+        transition: color 0.3s;
+  
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  
+    &__right {
+      text-align: right;
+  
+      em {
+        font-style: italic;
+      }
+  
+      p {
+        color: $primary-color;
+      }
+    }
+  }
+  

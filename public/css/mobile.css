@@ -1,5 +1,7 @@
-@charset "UTF-8";
 .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -8,19 +10,55 @@
       flex-wrap: wrap;
 }
 
-/* ===== Мобільні стилі ===== */
 @media (max-width: 768px) {
-  /* Бургер кнопка
-  .burger_btn {
-    display: block;
+  /* Header */
+  .header_container {
+    padding: 16px 20px;
   }
-  *\
-
-  /* ===== Hero ===== */
-  .hero_picture img {
+  .header_container .site_logo {
+    height: 50px;
+  }
+  .header_container nav {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+  }
+  .header_container nav.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header_container nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+  .header_container nav ul li a {
+    font-size: 16px;
+    color: white;
+  }
+  .header_container .menu_and_search {
+    gap: 8px;
+  }
+  .header_container .search_box input[type="text"] {
+    width: 120px;
+    padding: 6px 10px;
+  }
+  /* Hero */
+  .hero__picture img {
     top: 0;
   }
-  .overlay {
+  .hero__overlay {
     top: 40%;
     left: 5%;
     max-width: 90%;
@@ -28,139 +66,57 @@
     padding: 10px;
     font-size: 0.9rem;
   }
-  /* ===== Header ===== */
-  .header_container {
-    padding: 16px 20px;
-  }
-  .header_container .site_logo {
-    height: 50px;
-  }
-  .header_container .nav_container {
-    display: none;
-    /* ховаємо за замовчуванням */
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: absolute;
-    top: 100%;
-    /* під хедером */
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    padding: 20px;
-  }
-  .header_container .nav_container.active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    /* показуємо при кліку */
-  }
-  .header_container .nav_container ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 15px;
-  }
-  .header_container .nav_container ul li a {
-    font-size: 16px;
-    color: white;
-  }
-  .header_container nav ul {
-    gap: 12px;
-  }
-  .header_container nav ul li a {
-    font-size: 16px;
-  }
-  .menu_and_search {
-    gap: 8px;
-  }
-  .search_box input[type="text"] {
-    width: 120px;
-    padding: 6px 10px;
-  }
-  /* ===== Top Tools ===== */
-  .top_tools {
-    padding: 20px;
-  }
-  .top_tools .top_tools_title {
-    margin-left: auto;
-    margin-right: auto;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  .top_tools .tool_card {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: left;
-  }
-  .top_tools .tool_card img {
-    width: 100%;
-    height: 180px;
-  }
-  .top_tools .tool_card .top_tool_info {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .top_tools .tool_card .top_tool_info h3 {
-    font-size: 22px;
-  }
-  /* ===== About ===== */
-  #about {
+  /* About */
+  .about {
     padding: 40px 20px;
   }
-  .about_header {
+  .about__header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 20px;
   }
-  .about_cards {
+  .about__cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .about_card {
+  .about__cards-card {
     padding: 20px;
   }
-  /* ===== Tools List ===== */
-  .tools_list {
+  /* Tools List */
+  .tools__list {
     padding-top: 120px;
   }
-  .tools_list h2 {
+  .tools__list h2 {
     text-align: center;
   }
-  .tools_list .tool_cards_container {
+  .tools__list-cards-container {
     gap: 20px;
   }
-  .tools_list .tool_list_card {
+  .tools__list__card {
     width: 100%;
   }
-  /* ===== Tool Details ===== */
-  .tool_details {
+  /* Tool Details */
+  .tool-details {
     padding-top: 120px;
   }
-  .tool_details .tool_header {
+  .tool-details__header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
   }
-  .tool_details .tool_header .tool_button {
+  .tool-details__header-button {
     margin: 0 auto;
   }
-  .tool_details .tool_gallery img {
+  .tool-details__gallery img {
     width: 100%;
   }
-  /* ===== Footer ===== */
+  /* Footer */
   .footer_container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

@@ -1,49 +1,62 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 @media (min-width: 1024px) and (max-width: 1440px) {
 
-    .header_container {
-      padding: 24px 30px;
-  
-      .site_logo {
-        height: 65px;
-      }
-  
-      nav ul li a {
-        font-size: 18px;
-      }
+  /* Header */
+  .header_container {
+    padding: 24px 30px;
+
+    .site_logo {
+      height: 65px;
     }
 
-      .overlay {
-        left: 5%;       
-        max-width: 80%; 
-        gap: 15px;
-        padding: 15px;
-        font-size: 1rem; 
-      }
+    nav ul li a {
+      font-size: 18px;
     }
-  
-    .top_tools .tool_card img {
-      width: 160px;
-      height: 160px;
-    }
-  
-    #about {
-      padding: 50px 30px;
-    }
-  
-    .about_cards {
+  }
+
+  /* Hero overlay */
+  .hero__overlay {
+    left: 5%;
+    max-width: 80%;
+    gap: 15px;
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  /* Top tools */
+  .top_tools .tool__card img {
+    width: 160px;
+    height: 160px;
+  }
+
+  /* About */
+  .about {
+    padding: 50px 30px;
+
+    &__cards {
       gap: 20px;
     }
-  
-    .tools_list {
-      max-width: 900px;
-    }
-  
-    .tool_details .tool_header .tool_logo {
+  }
+
+  /* Tools List */
+  .tools__list {
+    max-width: 900px;
+  }
+
+  /* Tool Details */
+  .tool-details {
+    &__header &-logo {
       width: 90px;
       height: 90px;
     }
-  
-    .tool_details .tool_gallery img {
+
+    &__gallery img {
       width: calc(33.33% - 20px);
     }
-  
+  }
+}

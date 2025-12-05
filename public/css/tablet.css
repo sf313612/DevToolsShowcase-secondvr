@@ -1,5 +1,17 @@
-@charset "UTF-8";
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 @media (min-width: 1024px) and (max-width: 1440px) {
+  /* Header */
   .header_container {
     padding: 24px 30px;
   }
@@ -9,41 +21,37 @@
   .header_container nav ul li a {
     font-size: 18px;
   }
-  .overlay {
+  /* Hero overlay */
+  .hero__overlay {
     left: 5%;
-    /* менший відступ збоку */
     max-width: 80%;
-    /* трохи вже */
     gap: 15px;
     padding: 15px;
     font-size: 1rem;
-    /* текст трохи менший */
   }
-}
-
-.top_tools .tool_card img {
-  width: 160px;
-  height: 160px;
-}
-
-#about {
-  padding: 50px 30px;
-}
-
-.about_cards {
-  gap: 20px;
-}
-
-.tools_list {
-  max-width: 900px;
-}
-
-.tool_details .tool_header .tool_logo {
-  width: 90px;
-  height: 90px;
-}
-
-.tool_details .tool_gallery img {
-  width: calc(33.33% - 20px);
+  /* Top tools */
+  .top_tools .tool__card img {
+    width: 160px;
+    height: 160px;
+  }
+  /* About */
+  .about {
+    padding: 50px 30px;
+  }
+  .about__cards {
+    gap: 20px;
+  }
+  /* Tools List */
+  .tools__list {
+    max-width: 900px;
+  }
+  /* Tool Details */
+  .tool-details__header .tool-details-logo {
+    width: 90px;
+    height: 90px;
+  }
+  .tool-details__gallery img {
+    width: calc(33.33% - 20px);
+  }
 }
 /*# sourceMappingURL=tablet.css.map */

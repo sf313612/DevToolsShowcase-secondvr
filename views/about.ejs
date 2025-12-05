@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevToolsShowcase</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<!-- HEADER -->
+
+<body>
+
+    <!-- HEADER -->
+
+    <%- include('partials/header') %>
+
+    <!-- MAIN CONTENT -->
+
+    <main class = "place_holder">
+
+      <!-- ABOUT --> 
+      <section id="about" class="about">
+        <div class="about__header">
+            <h2 data-i18n="section.about">About Dev Tools Showcase</h2>
+            <div class="about__text">
+              <p data-i18n="about.description">
+                Dev Tools Showcase is a student project created to explore and present useful development tools in a clear and structured way.
+              </p>
+              <p data-i18n="about.description2">
+                The goal is to practice semantic HTML, responsive design, and accessibility principles while building a simple multi-page website.
+              </p>
+            </div>
+          </div>
+          
+          <div class="about__cards">
+            <div class="about__cards-card">
+              <h3 data-i18n="about.topic">Find</h3>
+              <p data-i18n="about.info">Find inspiration from other front-end designers and developers.</p>
+            </div>
+  
+          <div class="about__cards-card">
+            <h3 data-i18n="about.topic">Author</h3>
+            <p data-i18n="about.info">This project was designed and developed by a student as part of a web technologies course.</p>
+          </div>
+  
+          <div class="about__cards-card">
+            <h3 data-i18n="about.topic">Technologies</h3>
+            <p data-i18n="about.info">
+              Figma (design), HTML5 & CSS3 (structure and styling), JavaScript (basic interactivity)
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  <!-- FOOTER -->
+
+  <%- include('partials/footer') %>
+  
+</body>
+</html>

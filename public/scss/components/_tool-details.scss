@@ -1,0 +1,105 @@
+.tool-details {
+    padding: 180px 20px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: $background-color;
+  
+    &__header {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+  
+      &-logo {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+  
+      &-text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+  
+        h1 {
+          margin: 0;
+          @include sandFont(clamp(28px, 4vw, 36px), 700, $white);
+        }
+  
+        p {
+          margin: 0;
+          @include sandFont(14px, 400, $white);
+        }
+      }
+  
+      &-button {
+        display: inline-block;
+        padding: 12px 40px;
+        background-color: $secondary-color;
+        @include sandFont(18px, bold, $white);
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background 0.3s;
+        margin-left: auto;
+        margin-top: -60px;
+  
+        &:hover {
+          background-color: $attantion-color;
+        }
+      }
+    }
+  
+    &__info {
+      .tool-type {
+        font-size: 12px;
+        color: $white;
+      }
+  
+      .tool-description {
+        font-size: 14px;
+        line-height: 1.5;
+        color: $white;
+      }
+    }
+  
+    &__tabs {
+      display: flex;
+      gap: 10px;
+  
+      .tab {
+        padding: 8px 20px;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        background-color: $attantion-color;
+        color: $secondary-color;
+        transition: background 0.3s;
+  
+        &:hover {
+          background-color: $secondary-color;
+          color: $primary-color;
+        }
+      }
+    }
+  
+    &__gallery {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+  
+      img {
+        width: calc(33.33% - 13.33px);
+        border-radius: 12px;
+        object-fit: cover;
+      }
+    }
+  }
+  

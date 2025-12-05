@@ -1,0 +1,85 @@
+.about {
+    padding: 180px 20px 60px;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: centre;
+    gap: 20px;
+
+    h2 {
+      flex: 1;
+      color: $white;
+      max-width: 50%;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 2;
+    max-width: 650px;
+
+    p {
+      color: $white;
+      opacity: 0.9;
+      line-height: 1.5;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    gap: 24px;
+
+    &-card {
+      background: $secondary-color;
+      position: relative;
+      overflow: visible;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+
+      h3 {
+        position: relative;
+        display: inline-block;
+        z-index: 2;
+        @include sandFont(22px, 700, $white);
+        left: 20px;
+
+        &::before {
+          content: '';
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          background-color: $attantion-color;
+          display: inline-block;
+          position: absolute;
+          left: -20px;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: -1;
+        }
+      }
+
+      p {
+        line-height: 1.4;
+        opacity: 0.9;
+        color: $white;
+      }
+    }
+  }
+}
+
+footer {
+  flex-shrink: 0;
+}

@@ -37,12 +37,3 @@
   color: $color;
   font-style: $style;
 }
-
-@mixin sandFontB($size, $weight, $color, $style: normal) {
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: $weight;
-  font-size: $size;
-  color: $color;
-  font-style: $style;
-}

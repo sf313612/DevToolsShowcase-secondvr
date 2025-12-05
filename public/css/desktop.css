@@ -67,7 +67,6 @@
 
 .burger_btn {
   display: none;
-  /* ховаємо на десктопі */
   background: none;
   border: none;
   cursor: pointer;
@@ -167,15 +166,12 @@ section.hero {
 .overlay {
   position: absolute;
   top: 50%;
-  /* можеш підкоригувати відступ зверху */
   left: 10%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   max-width: 600px;
   z-index: 10;
-  /* текст завжди поверх картинки */
   color: #FFFFFF;
-  /* щоб текст був видимим на картинці */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,7 +184,7 @@ section.hero {
 }
 
 .top_tools {
-  padding: 16px 40px;
+  padding-bottom: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -228,6 +224,17 @@ section.hero {
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   color: inherit;
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.top_tools .tool_card:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .top_tools .tool_card img {
@@ -236,6 +243,8 @@ section.hero {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 8px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .top_tools .tool_card .top_tool_info {
@@ -249,19 +258,29 @@ section.hero {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 6px;
+  gap: 10px;
+  padding: 20px;
 }
 
 .top_tools .tool_card .top_tool_info .topic {
-  font-size: 14px;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 700;
+  font-size: 14px;
   color: #9C44D7;
+  font-style: normal;
 }
 
 .top_tools .tool_card .top_tool_info h3 {
   margin: 0;
   font-weight: 700;
   font-size: 32px;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 32px;
+  color: #262626;
+  font-style: normal;
 }
 
 .top_tools .tool_card .top_tool_info p {
@@ -281,6 +300,12 @@ section.hero {
   font-size: 12px;
   font-weight: 700;
   color: #262626;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 12px;
+  color: #262626;
+  font-style: normal;
 }
 
 .top_tools .tool_card .top_tool_info .info::before {

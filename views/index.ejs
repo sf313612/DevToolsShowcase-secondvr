@@ -21,93 +21,69 @@
 
     <main id="main_page">
 
-        <!-- HERO -->
         <section class="hero">
-          <picture class="hero_picture">
-            <!--<source srcset="../img/main_photo_small.png" media="(max-width: 600px)" type="image/webp">
-            <source srcset="../img/main_photo_medium.png" media="(max-width: 1000px)" type="image/webp">
 
-            <source srcset="../img/main_photo_small.png" media="(max-width: 600px)" type="image/png">
-            <source srcset="../img/main_photo_medium.png" media="(max-width: 1000px)" type="image/png">
-            -->
-            <img src="../img/main_photo.png" alt="Main illustration for the site">
-          </picture>
-            <div class="overlay">
-              <h1 data-i18n="hero.title">Dev Tools Showcase</h1>
-              <p data-i18n="hero.subtitle">Is a collection of small, practical utilities and code snippets designed to help developers in their daily work. Explore tools by category, view live demos, and find ready-to-use snippets for your projects.</p>
-              <button class = "learn_more_button" data-i18n="hero.button" aria-label="Learn more about Dev Tools Showcase">Learn more now</button>
-            </div>
+            <!-- Фонове зображення -->
+            <picture class="hero__picture">
+              <source srcset="../img/main_photo_small.png" media="(max-width: 600px)" type="image/webp">
+              <source srcset="../img/main_photo_medium.png" media="(max-width: 1000px)" type="image/webp">
+              <source srcset="../img/main_photo_small.png" media="(max-width: 600px)" type="image/png">
+              <source srcset="../img/main_photo_medium.png" media="(max-width: 1000px)" type="image/png">
+              <img src="../img/main_photo.png" alt="Main illustration for the site">
+            </picture>
+          
+            <div class="hero__overlay">
+                <h1 class="slide-up-from-bottom" data-i18n="hero.title">Dev Tools Showcase</h1>
+                <p class="slide-up-from-bottom" data-i18n="hero.subtitle">
+                    Is a collection of small, practical utilities and code snippets designed to help developers in their daily work. Explore tools by category, view live demos, and find ready-to-use snippets for your projects.
+                  </p>
+                <button class="learn_more_button slide-up-from-bottom" data-i18n="hero.button">
+                  Learn more now
+                </button>
+              </div>
+      
         </section>
         
         <!-- TOP TOOLS -->
-        <section class="top_tools">
-            <h2 class="top_tools_title" data-i18n="section.top_tools">Top tools today</h2>
-            
-            <!-- мікророзмітка додана на один атрибут -->
-            <a href="/details" class="tool_card" aria-label="View details about this tool" itemscope itemtype="https://schema.org/Article">
-                <img src="img/top_tool_photo1.png" alt="Top tool 1 preview" itemprop="image">
-                <div class="top_tool_info">
-                    <p class="topic" itemprop="about" data-i18n="top_tools.topic">Topic</p>
-                    <h3 itemprop="headline" data-i18n="top_tools.name">Tool Name</h3>
-                    <p itemprop="description" data-i18n="top_tools.description">Details about tool short description of it.</p>
-                    <p class="info" data-i18n="top_tools.info"><strong itemprop="author">Author </strong> | <span itemprop="datePublished">Date</span></p>
-                </div>
+        <section class="tools__list">
+          <h2 data-i18n="section.top_tools">Top tools today</h2>
+        
+          <div class="tools__list-cards-container">
+
+            <a href="/details" class="tools__card" aria-label="View details about this tool" itemscope itemtype="https://schema.org/Article">
+              <img src="img/top_tool_photo1.png" alt="Top tool 1 preview" itemprop="image">
+              <div class="tools__card-info">
+                <p class="topic" itemprop="about" data-i18n="top_tools.topic">Topic</p>
+                <h3 itemprop="headline" data-i18n="top_tools.name">Tool Name</h3>
+                <p itemprop="description" data-i18n="top_tools.description">Details about tool short description of it.</p>
+                <p class="info" data-i18n="top_tools.info"><strong itemprop="author">Author </strong> | <span itemprop="datePublished">Date</span></p>
+              </div>
             </a>
-
-            <a href="/details" class="tool_card" aria-label="View details about this tool">
-                <img src="img/top_tool_photo2.png" alt="Top tool 2 preview photo">
-                <div class="top_tool_info">
-                    <p class="topic" data-i18n="top_tools.topic">Topic</p>
-                    <h3 data-i18n="top_tools.name">Tool Name</h3>
-                    <p data-i18n="top_tools.description">Details about tool short description of it.</p>
-                    <p class="info" data-i18n="top_tools.info"><strong>Author | Date</strong></p>
-                </div>
+        
+            <a href="/details" class="tools__card" aria-label="View details about this tool">
+              <img src="img/top_tool_photo2.png" alt="Top tool 2 preview photo">
+              <div class="tools__card-info">
+                <p class="topic" data-i18n="top_tools.topic">Topic</p>
+                <h3 data-i18n="top_tools.name">Tool Name</h3>
+                <p data-i18n="top_tools.description">Details about tool short description of it.</p>
+                <p class="info" data-i18n="top_tools.info"><strong>Author | Date</strong></p>
+              </div>
             </a>
-
-            <a href="/details" class="tool_card" aria-label="View details about this tool">
-                <img src="img/top_tool_photo3.png" alt="Top tool 3 preview photo">
-                <div class="top_tool_info">
-                    <p class="topic" data-i18n="top_tools.topic">Topic</p>
-                    <h3 data-i18n="top_tools.name">Tool Name</h3>
-                    <p data-i18n="top_tools.description">Details about tool short description of it.</p>
-                    <p class="info" data-i18n="top_tools.info"><strong>Author | Date</strong></p>
-                </div>
+        
+            <a href="/details" class="tools__card" aria-label="View details about this tool">
+              <img src="img/top_tool_photo3.png" alt="Top tool 3 preview photo">
+              <div class="tools__card-info">
+                <p class="topic" data-i18n="top_tools.topic">Topic</p>
+                <h3 data-i18n="top_tools.name">Tool Name</h3>
+                <p data-i18n="top_tools.description">Details about tool short description of it.</p>
+                <p class="info" data-i18n="top_tools.info"><strong>Author | Date</strong></p>
+              </div>
             </a>
-
-            <div class="see_list_button">
-                <a href="/tools" class="see_list" data-i18n="btn.see_list" aria-label="View full list of tools">See list</a>
-            </div>
-                
-        </section>
-
-        <!-- ABOUT -->
-        <section id="about">
-
-            <div class="about_header">
-                <h2 data-i18n="section.about">About Dev Tools Showcase </h2>
-                <div class="about_text">
-                    <p data-i18n="about.description">Dev Tools Showcase is a student project created to explore and present useful development tools in a clear and structured way.</p>
-                    <p data-i18n="about.description2">The goal is to practice semantic HTML, responsive design, and accessibility principles while building a simple multi-page website.</p>
-                </div>
-            </div>
-            
-            <div class="about_cards">
-
-                <div class="about_card">
-                    <h3 data-i18n="about.topic">Find</h3>
-                    <p data-i18n="about.info">Find inspiration from other front-end designers and developers.</p>
-                </div>
-
-                <div class="about_card">
-                    <h3 data-i18n="about.topic">Author</h3>
-                    <p data-i18n="about.info">This project was designed and developed by a student as part of a web technologies course.</p>
-                </div>
-
-                <div class="about_card">
-                    <h3 data-i18n="about.topic">Technologies</h3>
-                    <p data-i18n="about.info">Figma (design), HTML5 & CSS3 (structure and styling), JavaScript (basic interactivity)</p>
-                </div>
-            </div>
+          </div>
+      
+          <div class="see_list_button">
+            <a href="/tools" class="see_list" data-i18n="btn.see_list" aria-label="View full list of tools">See list</a>
+          </div>
         </section>
 
     </main>

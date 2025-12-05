@@ -1,0 +1,91 @@
+.header {
+    background-color: $secondary-color;
+    padding: 26px 40px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2000;
+  
+    &__logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      
+      h4{
+        @include sandFont(20px, 700, $white);
+        span{
+          color: $primary-color;
+        }
+      }
+    }
+  
+    &__nav {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+  
+      ul {
+        display: flex;
+        padding: 0;
+        gap: 24px;
+  
+        li a {
+          @include sandFont(20px, 400, $white);
+        }
+      }
+    }
+  
+    &__burger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+  
+      &::before {
+        content: "\2630"; 
+        font-size: 28px;
+        color: white;
+      }
+    }
+  }
+  
+  .menu-and-search {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .header__menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 24px;
+  }
+  
+  .search-box {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+  
+    input[type="text"] {
+      padding: 8px 12px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: all 0.3s;
+      background-color: #f0f0f0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  
+      &:focus {
+        border-color: $attantion-color;
+        box-shadow: 0 0 5px rgba(178, 83, 251, 0.5);
+      }
+    }
+  }
+  
