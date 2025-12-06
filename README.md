@@ -81,9 +81,17 @@ Dev Tools Showcase — веб-сервіс, що демонструє колек
 ## Адаптивні зображення (responsive picture)
 Використано `<picture>` з: webp, png, srcset, media queries  
 Приклад:
-```html
+html
+
 <picture>
   <source srcset="main_photo_small.webp" media="(max-width: 600px)">
   <source srcset="main_photo_large.webp" media="(min-width: 600px)">
   <img src="main_photo.png" alt="">
 </picture>
+
+## Стек
+- bbggvjggtHTML + EJS (template rendering)
+- SCSS (7-1 architecture)
+- CSS animations
+- Responsive Images
+- JavaScript (для кнопок і переходів)
