@@ -1,6 +1,6 @@
 # Dev Tools Showcase
 
-## Огляд проєкту
+## Огляд проекту
 Dev Tools Showcase — веб-сервіс, що демонструє колекцію практичних інструментів, прикладів та описів для розробників. Мета проєкту — зібрати базові та корисні інструменти в одному місці.
 
 ## Основні сторінки та функції
@@ -84,11 +84,9 @@ Dev Tools Showcase — веб-сервіс, що демонструє колек
 Приклад:
 html
 
-<picture>
-  <source srcset="main_photo_small.webp" media="(max-width: 600px)">
-  <source srcset="main_photo_large.webp" media="(min-width: 600px)">
-  <img src="main_photo.png" alt="">
-</picture>
+<img width="1873" height="924" alt="image" src="https://github.com/user-attachments/assets/48c261a6-29c3-4f0d-8890-f2772a2f3838" />
+<img width="1874" height="929" alt="image" src="https://github.com/user-attachments/assets/c62d3c6b-bd85-40f5-99c6-f7c959db16db" />
+
 
 ## Стек
 - bbggvjggtHTML + EJS (template rendering)
@@ -96,5 +94,6 @@ html
 - CSS animations
 - Responsive Images
 - JavaScript (для кнопок і переходів)
+
 
 
